@@ -6,7 +6,7 @@ from .base_fer_dataset import BaseFerDataset
 class BaseCondensedDataset(BaseFerDataset):
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
-    DATASET_CLASSES = ['Negativ','Positive','Neutral']
+    DATASET_CLASSES = ["Neutral", "Happiness", "Other"]
     CLASSES = DATASET_CLASSES
 
 
