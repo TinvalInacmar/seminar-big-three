@@ -135,7 +135,10 @@ def main():
 
     datasets = [build_dataset(cfg.data.train)]
     for x in cfg:
+        print("-----------")
         print(x)
+        for y in x:
+            print(y)
     #print(datasets)
     exit()
     if len(cfg.workflow) == 2:
