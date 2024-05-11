@@ -134,6 +134,9 @@ def main():
     # exit()
 
     datasets = [build_dataset(cfg.data.train)]
+    print(cfg.data.train)
+    print(datasets)
+    exit()
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
         # val_dataset.pipeline = cfg.data.val.pipeline
