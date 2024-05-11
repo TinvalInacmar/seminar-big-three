@@ -97,8 +97,9 @@ class BaseFerDataset(BaseDataset):
             self.folder_to_idx = folder_to_idx
         elif isinstance(self.ann_file, str):
             with open(self.ann_file) as f:
+                print(f.readline())
                 samples = [x.strip().split(',') for x in f.readlines()]
-            #print(samples)
+            print(samples)
             samples = [[i[0].replace('_aligned', ''), i[1]] for i in samples]
         else:
             raise TypeError('ann_file must be a str or None')
