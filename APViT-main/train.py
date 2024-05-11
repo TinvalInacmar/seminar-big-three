@@ -137,7 +137,7 @@ def main():
     for x in cfg:
         print("-----------")
         print(x)
-        for y in x:
+        for y in cfg[x]:
             print(y)
     #print(datasets)
     exit()
