@@ -137,8 +137,9 @@ def main():
     for x in cfg:
         print("-----------")
         print(x)
-        for y in cfg[x]:
-            print(y)
+        if not (x==None):
+            for y in cfg[x]:
+                print(y)
     #print(datasets)
     exit()
     if len(cfg.workflow) == 2:
