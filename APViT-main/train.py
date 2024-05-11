@@ -134,8 +134,8 @@ def main():
     # exit()
 
     datasets = [build_dataset(cfg.data.train)]
-    print(cfg.data.train)
-    print(datasets)
+    print(cfg["gt_label"])
+    #print(datasets)
     exit()
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
