@@ -109,7 +109,10 @@ class BaseFerDataset(BaseDataset):
             info = {'img_prefix': self.data_prefix}
             info['img_info'] = {'filename': filename}
             gt_label = int(gt_label)
+            print("gt_label prije", gt_label)
             gt_label = self.convert_gt_label(gt_label)
+            print("gt_label NAKON", gt_label)
+            print()
             coarse_label = convert2coarse_label(gt_label)
             info['gt_label'] = np.array(gt_label, dtype=np.int64)
             info['coarse_label'] = np.array(coarse_label, dtype=np.int64)
