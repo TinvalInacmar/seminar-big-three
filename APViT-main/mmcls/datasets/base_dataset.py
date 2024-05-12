@@ -70,6 +70,7 @@ class BaseDataset(Dataset, metaclass=ABCMeta):
         """
 
         gt_labels = np.array([data['gt_label'] for data in self.data_infos])
+        print(gt_labels)
         return gt_labels
     
     def get_coarse_labels(self):
