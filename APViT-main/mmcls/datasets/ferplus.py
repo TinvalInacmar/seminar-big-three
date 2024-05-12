@@ -4,11 +4,7 @@ from .base_fer_dataset import BaseFerDataset
 
 @DATASETS.register_module()
 class FERPlus(BaseFerDataset):
-    DATASET_CLASSES = ['Neutral', 'Happiness', 'Surprise', 'Sadness', 'Anger', 'Disgust', 'Fear', 'Contempt']
-    CONVERT_TABLE = (6, 4, 5, 3, 0, 1, 2, 7) #(0,1,2,2,2,2,2,2)
-    
-    def convert_gt_label(self, i:int):
-        """# dataset -> FER_BASE_CLASSES"""
-        convert_table = self.CONVERT_TABLE
-        assert sum(convert_table) == sum([i for i in range(8)])
-        return convert_table[i]
+    DATASET_CLASSES = ["Neutral", "Happiness", "Other"]
+    CONVERT_TABLE = (2, 2, 2, 2, 1, 2, 0, 2) 
+#FER_BASE_CLASSES = ['Anger', 'Disgust', 'Fear', 'Sadness', 'Happiness', 'Surprise', 'Neutral', 'Contempt']
+

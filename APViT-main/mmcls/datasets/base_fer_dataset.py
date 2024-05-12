@@ -78,7 +78,7 @@ class BaseFerDataset(BaseDataset):
     def convert_gt_label(self, i:int):
         """# dataset -> FER_BASE_CLASSES"""
         convert_table = self.CONVERT_TABLE
-        assert sum(convert_table) == sum([i for i in range(7)])
+        #assert sum(convert_table) == sum([i for i in range(8)])
         return convert_table[i]
 
     def load_annotations(self):

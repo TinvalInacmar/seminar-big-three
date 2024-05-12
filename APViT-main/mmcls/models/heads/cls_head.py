@@ -41,6 +41,7 @@ class ClsHead(BaseHead):
         losses = dict()
         # compute loss
         # TODO: export every loss to losses dict
+        #print(gt_label)
         loss = sum([f(cls_score, gt_label, avg_factor=num_samples) for f in self.compute_loss])
         losses['ce_loss'] = loss
         if self.cal_acc:

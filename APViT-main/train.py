@@ -21,7 +21,7 @@ from mmcls.utils import collect_env, get_root_logger
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a model')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument('--config',default="./configs/apvit/FERPlus.py", help='train config file path')
     parser.add_argument('--work_dir', help='the dir to save logs and models')
     parser.add_argument(
         '--resume_from', help='the checkpoint file to resume from')
@@ -134,14 +134,7 @@ def main():
     # exit()
 
     datasets = [build_dataset(cfg.data.train)]
-    for x in cfg:
-        print("-----------")
-        print(x)
-        if not (x==None):
-            for y in cfg[x]:
-                print(y)
-    #print(datasets)
-    exit()
+
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
         # val_dataset.pipeline = cfg.data.val.pipeline
